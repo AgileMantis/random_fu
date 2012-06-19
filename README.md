@@ -8,7 +8,20 @@ Setup
 
 Simply <pre>require_relative 'random_fu.rb'</pre> 
 
-### String Usage
+## String Usage
+
+### String#random(count)
+
+Produces a random string the size of count created from only the characters in the string.  NOTE, characters may repeat and
+not all characters in the string will probably be used.  The String is just a source of possible characters.  To place a 
+string in a random order, use the soon to be created String#random_order.
+
+Example, "abcd".random(n) could result in just one letter used multiple times:
+
+     "abcd".random(2)
+     # => "dd"
+
+#### Examples:
 
 To produce a random character from the alphabet:
 
