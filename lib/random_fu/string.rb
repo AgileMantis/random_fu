@@ -1,10 +1,11 @@
 module RandomFu
 
   module StringInstanceMethods
-    def random(count=nil)
-      count ||= self.length
-      if count > self.length then raise(ArgumentError, "count needs to be <= string length") end
-      return "" if count==0
+    def random(count)
+      if !count.is_a?(Integer) || count < 1 then 
+        raise(ArgumentError, "count needs to be a Integer >= 1") 
+      end
+      return "" if self.empty?
 
       char = []
       1.upto(count) do
