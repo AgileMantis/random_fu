@@ -6,7 +6,7 @@ A Ruby gem to add random capability.  Currently, only for Strings.
 Installation
 ============
 
-Random_fu is distributed as a ruby gem.  Simply require it in your Gemfile.
+Random_fu will soon be distributed as a ruby gem (not yet published, in dev).  Simply require it in your Gemfile.
 
     gem "random_fu"
 
