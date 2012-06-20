@@ -31,7 +31,7 @@ will be the same length.  The result is simply a jumbled version.
     # => "b"
 
     "abcdef".random_order[0,2]  # Two random letters between a and f
-    # => "bc"
+    # => "eb"
 
 ## String#random(count)
 
