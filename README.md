@@ -27,17 +27,17 @@ will be the same length.  The result is simply a jumbled version.
     "abc".random_order
     # => "cba"
     
-    "abcdef".random_order[1]    # Random letter between a and f
+    "abcdef".random_order[0]    # Random letter between a and f
     # => "b"
 
-    "abcdef".random_order[1,2]  # Two random letters between a and f
+    "abcdef".random_order[0,2]  # Two random letters between a and f
     # => "bc"
 
 ## String#random(count)
 
-Random string the size of count created from the characters in the string.  Characters use one or more times, and
-thus characters may repeat and/or not be used at all.  The source string is just a list of possible characters (to place a 
-string in a random order, use the soon to be created String#random_order).  For example, "abcd".random(n) could result in 
+Random string the size of count created from the characters in the string.  Characters are used one or more times, and
+characters may repeat and/or not be used at all.  The source string is just a list of possible characters (to place a 
+string in a random order, use String#random_order).  For example, "abcd".random(n) could result in 
 just one letter used multiple times:
 
      "abcd".random(2)
