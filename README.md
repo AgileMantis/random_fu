@@ -19,7 +19,7 @@ Random_fu will soon be distributed as a ruby gem (not yet published, in dev).  S
 
 ## String#random_order
 
-Random string created from the characters in the string.  Characters in the string are used only once, and the result
+Returns a random string created from the characters in the string.  Characters in the string are used only once, and the result
 will be the same length.  The result is simply a jumbled version.
 
 ### Examples:
@@ -35,7 +35,7 @@ will be the same length.  The result is simply a jumbled version.
 
 ## String#random(count)
 
-Random string the size of count created from the characters in the string.  Characters are used one or more times, and
+Returns a random string the size of count created from the characters in the string.  Characters are used one or more times, and
 characters may repeat and/or not be used at all.  The source string is just a list of possible characters (to place a 
 string in a random order, use String#random_order).  For example, "abcd".random(n) could result in 
 just one letter used multiple times:

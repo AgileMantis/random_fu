@@ -9,11 +9,11 @@ Gem::Specification.new do |s|
   s.description = "Incorprate random helpers into your app"
   s.email = ["brian@ledsworth.com"]
   s.homepage = "https://github.com/AgileMantis/random_fu"
-  # s.platform = Gem::Platform::RUBY
   s.required_ruby_version = '>= 1.9.3'
-  # s.files = Dir['**/**'] 
-  # s.test_files = Dir['spec/*_spec.rb'] 
+  s.files = 'git ls-files'.split("\n")
+  s.test_files = 'git ls-files -- {test,spec,features}/*'.split("\n")
+  s.require_paths = ["lib"]
   # s.has_rdoc = false
-
-  s.add_development_dependency('rspec')
+  # s.add_development_dependency('rspec')
+  # s.platform = Gem::Platform::RUBY
 end
