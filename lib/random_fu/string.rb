@@ -7,12 +7,24 @@ module RandomFu
       end
       return "" if self.empty?
 
-      char = []
+      result = ""
       1.upto(count) do
-        char << self[rand(self.length)]
+        result << self[rand(self.length)]
       end
-      char.join
+      result
     end
+
+    def random_order
+      return "" if self.empty?
+
+      result = ""
+      chars = self.split(//)
+      1.upto(chars.size) do
+        result << chars.delete_at(rand(chars.size))
+      end
+      result
+    end
+
   end
 
 end

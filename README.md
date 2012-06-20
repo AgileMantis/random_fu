@@ -1,7 +1,12 @@
 Random_fu 
 =========
 
-A Ruby gem to add random capability.  Currently, only for Strings.
+A Ruby gem to add random capability.  Currently, only for Strings.  
+
+DO NOT USE for generating any data related to security!!!  
+---------------------------------------------------------
+There are better, more secure, methods for this.  This gem is meant ONLY for non secure
+random strings.
 
 Installation
 ============
@@ -12,28 +17,47 @@ Random_fu will soon be distributed as a ruby gem (not yet published, in dev).  S
 
 ## Usage
 
+## String#random_order
+
+Random string created from the characters in the string.  Characters in the string are used only once, and the result
+will be the same length.  The result is simply a jumbled version.
+
+### Examples:
+
+    "abc".random_order
+    # => "cba"
+    
+    "abcdef".random_order[1]    # Random letter between a and f
+    # => "b"
+
+    "abcdef".random_order[1,2]  # Two random letters between a and f
+    # => "bc"
+
 ## String#random(count)
 
-Produces a random string the size of count created from only the characters in the string.  NOTE, characters may repeat and
-not all characters in the string will probably be used.  The String is just a source of possible characters.  To place a 
-string in a random order, use the soon to be created String#random_order.
-
-Example, "abcd".random(n) could result in just one letter used multiple times:
+Random string the size of count created from the characters in the string.  Characters use one or more times, and
+thus characters may repeat and/or not be used at all.  The source string is just a list of possible characters (to place a 
+string in a random order, use the soon to be created String#random_order).  For example, "abcd".random(n) could result in 
+just one letter used multiple times:
 
      "abcd".random(2)
      # => "dd"
 
-#### Examples:
+### Examples:
 
 To produce a random character from the alphabet:
 
     "abcdefghijklmnopqrstuvwxyz".random(1)
     # => "d"
 
+    ("a".."z").to_a.join.random(1)
+    # => "j"
+
 To produce a 20 character random string from the alphabet:
 
     "abcdefghijklmnopqrstuvwxyz".random(20)
     # => "ijvrvddrwgucdsyzybfq"
+
 
 License
 =======
