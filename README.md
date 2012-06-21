@@ -1,7 +1,7 @@
 Random_fu 
 =========
 
-A Ruby gem to add random capability.  Currently, only for Strings.  Tested with 
+ A Ruby gem to add random capability.  Currently, only for Strings and Hashes.  Tested with 
 ruby 1.9.2 and RSpec 2.10
 
 DO NOT USE for generating any data related to security!!!  
@@ -18,6 +18,8 @@ Random_fu will soon be distributed as a ruby gem (not yet published, in dev).  S
 
 ## Usage
 
+## Strings
+----------
 ## String#random_order
 
 Returns a random string created from the characters in the string.  Characters in the string are used only once, and the result
@@ -59,6 +61,19 @@ To produce a 20 character random string from the alphabet:
     "abcdefghijklmnopqrstuvwxyz".random(20)
     # => "ijvrvddrwgucdsyzybfq"
 
+## Hashs
+--------------
+## Hash#random
+Returns the value from a random key.  If called on an empty hash, returns nil.
+
+### Examples:
+
+    hash = { first_base: 'fred', second_base: 'tom', pitcher: 'jen' }
+    hash.random
+    # => "jen"
+    
+    {}.random
+    # => nil
 
 License
 =======
