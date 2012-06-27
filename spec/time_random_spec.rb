@@ -49,4 +49,19 @@ describe "random_fu's Time#random_between" do
     end
   end
 
+  it "may include lower and upper bound" do
+    # Need to look into srand for deterministic random values
+    # for deterministic tests...This is ugly and could fail
+    # if odds are just right
+    lower_hit = upper_hit = false
+    10.times do 
+      time_ohter = time_now + 1
+      rnd = time_now.random_between(time_ohter)
+      lower_hit = lower_hit || (rnd.to_i == time_now.to_i)
+      upper_hit = upper_hit || (rnd.to_i == time_ohter.to_i)
+    end
+    lower_hit.should be_true
+    upper_hit.should be_true
+  end
+
 end

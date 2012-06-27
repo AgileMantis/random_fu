@@ -75,6 +75,29 @@ Returns the value from a random key.  If called on an empty hash, returns nil.
     {}.random
     # => nil
 
+## Time
+--------------
+## Time#random_between(Time)
+Returns a Time object which is random between self and the Time object passed in. 
+Note, the Time returned MAY be equal to self or the Time passed in!  Lower and 
+Upper bound times are possible values, just like 0 and 1 are between?(0,1) in Ruby.
+
+### Examples:
+
+    t=Time.now
+    # => 2012-06-27 13:57:02 -0500
+    t2 = t + 60
+    # => 2012-06-27 13:58:02 -0500
+    t.random_between(t2)
+    # => 2012-06-27 13:57:17 -0500
+
+    t=Time.new(2012,6,1)
+    # => 2012-06-01 00:00:00 -0500
+    t2=Time.new(2012,6,30)
+    # => 2012-06-30 00:00:00 -0500
+    t.random_between(t2)
+    # => 2012-06-09 20:01:45 -0500
+
 License
 =======
 

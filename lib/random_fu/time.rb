@@ -16,8 +16,12 @@ module RandomFu
       return self if self==other_time
 
       # for large spans between time, to_i is not efficeint
+      rnd = rand(self.to_i - other_time.to_i + 1) 
+      # w/o +1, time may equal self but would never equal other_time
+      # e.g. .30 seconds and .40 seconds, requires a random number
+      # between 0 and 10, thus rand(11), or rand(40-30+1)
+
       time = self.dup
-      rnd = rand(self.to_i - other_time.to_i)
       time = self.dup + ((self < other_time) ? rnd : -rnd)
     end
 
