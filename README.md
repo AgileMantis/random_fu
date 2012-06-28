@@ -2,7 +2,7 @@ Random_fu
 =========
 
 A Ruby gem to add random capability.  Currently, only for Strings, Hashes and Time.  Tested with 
-ruby 1.9.2 and RSpec 2.10.  Note, classes are monkey patched by adding "random" and "random_foo"
+ruby 1.9.2 and RSpec 2.10.  Note, classes are monkey patched by adding "random" and "random_%whatever%"
 instance methods to Ruby classes. 
 
 DO NOT USE for generating any data related to security!!!  

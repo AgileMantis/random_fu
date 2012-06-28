@@ -21,8 +21,8 @@ module RandomFu
       # e.g. .30 seconds and .40 seconds, requires a random number
       # between 0 and 10, thus rand(11), or rand(40-30+1)
 
-      time = self.dup
-      time = self.dup + ((self < other_time) ? rnd : -rnd)
+      time = Time._load(self._dump)
+      time += ((self < other_time) ? rnd : -rnd)
     end
 
   end

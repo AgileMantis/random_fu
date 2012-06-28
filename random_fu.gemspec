@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.summary = "Random helpers"
   s.version = RandomFu::VERSION
   s.author = "Brian Ledsworth of Ledsworth Consluting LLC"
-  s.description = "Incorprate random helpers into your app"
+  s.description = "Incorprates random instance methods into Ruby classes, for misc random helpers"
   s.email = ["brian@ledsworth.com"]
   s.homepage = "https://github.com/AgileMantis/random_fu"
   s.required_ruby_version = '>= 1.9.2'
